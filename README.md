@@ -11,8 +11,8 @@ Python 3.9 Django 4.2
 
 Клонировать репозиторий и перейти в него в командной строке:
 ```
-git clone git@github.com:BobHawler/hw05_final.git
-cd hw05_final/
+git clone git@github.com:BobHawler/YaTube.git
+cd YaTube/
 ```
 ### Cоздать и активировать виртуальное окружение:
 ```
