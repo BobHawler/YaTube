@@ -1,0 +1,10 @@
+asgiref==3.6.0
+Django==4.2.1
+django-debug-toolbar==3.2.4
+Pillow==9.5.0
+pytz==2023.3
+sorl-thumbnail==12.9.0
+sqlparse==0.4.4
+toml==0.10.2
+tzdata==2023.3
+urllib3==1.26.15

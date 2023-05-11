@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block title%}Последние обновления на сайте{% endblock %}
+{% block content %}
+  <h1>Последние обновления на сайте</h1>
+  {% load cache %}
+  {% include 'includes/switcher.html' %} 
+  {% for post in page_obj %}
+      {% include 'includes/posts_meta.html' %}
+      <p>
+        {% thumbnail post.image "960x339" crop="center" upscale=True as im %}
+        <img class="card-img my-2" src={{ im.url }}>
+        {% endthumbnail %}
+        {{ post.text|linebreaksbr }}
+      </p>
+      {% if posts.group %}
+        <a href ="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+      {% endif %}
+      {% if not forloop.last %}<hr>{% endif %}  
+    {% endfor %}
+    {% include 'includes/paginator.html' %}
+{% endblock %}
+{% include 'includes/footer.html'%}
